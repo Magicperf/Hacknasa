@@ -2,7 +2,7 @@ let CLIENT_IP_ADDRESS="";
 let TEXTAREA_INTERACTION = $("#id_hackConsoleTextarea");
 let CLIENT_DETAILS={};
 let BASE_MESSAGES=['Connecting...', 'Connection Successful!' , 'Injecting HTML markup input...', 'Access Granted!', 'Declassifying documents...','Connection Interrupted!'];
-let FBI_MESSAGES=['THIS IS THE FBI - AN ILLEGAL CONNECTION HAS BEEN DETECTED!', 'Localizing...' , 'Localization Retrieved!', 'Tracking...'];
+let FBI_MESSAGES=['THIS IS THE FBI - AN ILLEGAL CONNECTION HAS BEEN DETECTED!', 'Localizing...' , 'Location Retrieved!', 'Tracking...'];
 
 $( document ).ready(function() {
   addToTextarea('STARTING....');
@@ -57,12 +57,21 @@ function trackingMessages(){
     if(count===trackingInfoArray.length){
       clearInterval(trackingInterval);
       $('#id_donateForm').show();
-      $('#id_modal_cancel').removeAttr("disabled");
+      $('#id_modal_cancel').prop("disabled", false);
     }else {
       addToTextarea(trackingInfoArray[count])
     }
     count++;
   }, 2000);
+}
+
+$("#id_modal_cancel").click(function(){
+  clear();
+});
+
+function clear(){
+  TEXTAREA_INTERACTION.html("");
+  $('#id_modal_cancel').prop("disabled", true);
 }
 
 function addToTextarea(data){

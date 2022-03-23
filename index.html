@@ -58,8 +58,7 @@
           <h5 class="modal-title" id="id_hackingModalLabel">Hacking Console</h5>
         </div>
         <div class="modal-body">
-          <label for="id_hackConsoleTextarea" class="form-label">Console:</label>
-          <textarea id="id_hackConsoleTextarea" cols="60" rows="25" disabled></textarea>
+          <textarea id="id_hackConsoleTextarea" cols="40" rows="25" disabled></textarea>
         </div>
         <div class="modal-footer">
           <form id="id_donateForm" action="https://www.paypal.com/donate" method="post" target="_top">
@@ -88,16 +87,11 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-223080687-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-223080687-1');
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-223080687-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
-
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
