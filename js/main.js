@@ -52,7 +52,7 @@ function trackingMessages(){
   let trackingInfoArray = ['Connected from: '+CLIENT_DETAILS.ip, 'Country: '+CLIENT_DETAILS.country_name, 'State: '
   + CLIENT_DETAILS.region,'City: '+ CLIENT_DETAILS.city, 'Internet Provided By: ' + CLIENT_DETAILS.isp,'Coordinates: '
   +CLIENT_DETAILS.latitude + ' ' + CLIENT_DETAILS.longitude, 'Postal Code: ' + CLIENT_DETAILS.postal_code,'FBI Authorized to break in!','10','9','8','7','6','5'
-    ,'4','3','2','1', 'THE END - THANKS FOR PLAYING - Please donate to keep this game alive'];
+    ,'4','3','2','1', 'THE END - THANKS FOR PLAYING - Please donate $1 to keep this game alive'];
   let trackingInterval = setInterval(function () {
     if(count===trackingInfoArray.length){
       clearInterval(trackingInterval);
